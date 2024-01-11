@@ -4,6 +4,9 @@ const computerChoices = ["rock", "paper", "scissor"];
 
 // Create function for computer choice to randomly return array element
 
+function getComputerChoice() {
+    return computerChoices [Math.floor(Math.random() * computerChoices.length)];
+}
 
 // Establish players choice through prompt input
     // Players entry is not case sensitive 
