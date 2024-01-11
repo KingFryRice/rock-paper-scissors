@@ -1,5 +1,6 @@
 // Establish array for computer choice
 
+const computerChoices = ["rock", "paper", "scissor"];
 
 // Create function for computer choice to randomly return array element
 
