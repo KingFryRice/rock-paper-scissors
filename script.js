@@ -49,5 +49,5 @@ function endGame() {
         console.log("Better luck next time, refresh if you want to try again!");
 }
 
-game();
-endGame();
+// game();
+// endGame();
