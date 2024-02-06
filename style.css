@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: black;
 }
 
 header {
@@ -37,6 +38,13 @@ main .main-contain {
   font-size: 20px;
   padding:10px; 
   margin: 0 30px;
+  width: 125px;
+  transition-duration: 0.4s;
+}
+
+.main-contain button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: rgb(193, 192, 192);
 }
 
 .results {

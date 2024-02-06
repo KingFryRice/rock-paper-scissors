@@ -1,5 +1,7 @@
-// Establish array for computer choice
-    // Create function for computer choice to randomly return array element
+let playerSelection
+let computerSelection
+let playerScore = 0;
+let computerScore = 0;
 
 const computerChoices = ["rock", "paper", "scissor"];
 
@@ -7,12 +9,18 @@ function getComputerChoice() {
     return computerChoices [Math.floor(Math.random() * computerChoices.length)];
 }
 
-// Create function to evaluate computer choice and player choice and declare a winner with string and display in console
-
-let playerSelection
-let computerSelection
-let playerScore = 0;
-let computerScore = 0;
+const rock = document.querySelector(".rock");
+rock.addEventListener('click', () => {
+    console.log(rock.className);
+});
+const paper = document.querySelector(".paper");
+paper.addEventListener('click', () => {
+    console.log(paper.className);
+});
+const scissor = document.querySelector(".scissor");
+scissor.addEventListener('click', () => {
+    console.log(scissor.className);
+});
 
 function playRound(playerSelection, computerSelection) {
     if ((playerSelection === "paper" && computerSelection === "rock") ||
@@ -27,9 +35,6 @@ function playRound(playerSelection, computerSelection) {
         return "I got you this round!";
     }
 }    
-
-// Loop game until computer or player wins at least 3 games
-    // Either player or computer declared winner after game is over
 
 function game() {
     do {
