@@ -21,16 +21,15 @@ function getComputerSelection() {
 function playGame() {
     buttons.forEach(button => {
     button.addEventListener("click", () =>  {
-        if (playerScore === 3) {
-            endGameResult.textContent = "Great job you've bested me! Refresh to play again, I won't lose this time!.";
-        } else if (computerScore === 3) {
-            endGameResult.textContent =  "Better luck next time, refresh if you want to try again!";
-        } else {
+        if (playerScore < 3 && computerScore < 3) {
             playerSelection = button.className;
             playRound(playerSelection);
             choice.textContent = "Computer chose: " + computerSelection;
-        };
-        });
+        } if (playerScore === 3) {
+            endGameResult.textContent = "Great job you've bested me! Refresh to play again, I won't lose this time!.";
+        } else if (computerScore === 3) {
+            endGameResult.textContent =  "Better luck next time, refresh if you want to try again!";
+        }});
     });
 };
 
