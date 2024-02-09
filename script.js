@@ -20,19 +20,12 @@ function getPlayerSelection() {
     buttons.forEach(button => {
     button.addEventListener("click", () =>  {
         playerSelection = button.className;
-        return playerSelection;
         });
     });
 };
 
-function getSelections() {
-    getPlayerSelection();
-    getComputerSelection();
-    console.log(playerSelection);
-    console.log(computerSelection);
-}
-
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
+    computerSelection = getComputerSelection();
     if ((playerSelection === "paper" && computerSelection === "rock") ||
         (playerSelection === "rock" && computerSelection === "scissor") ||
         (playerSelection === "scissor" && computerSelection === "paper")) {
@@ -44,6 +37,8 @@ function playRound(playerSelection, computerSelection) {
         computerScore ++;
         result.textContent = "I got you this round!";
     }
+    playerScoreKeeper.textContent = playerScore;
+    computerScoreKeeper.textContent = computerScore;
 }    
 
 function game() {
@@ -60,8 +55,6 @@ function endGame() {
         endGameResult.textContent =  "Better luck next time, refresh if you want to try again!";
 }
 
-getSelections();
-//playRound();
-//game();
-//endGame();
+game();
+endGame();
 
